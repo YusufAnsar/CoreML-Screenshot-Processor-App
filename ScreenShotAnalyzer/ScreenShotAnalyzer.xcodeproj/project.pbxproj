@@ -17,6 +17,11 @@
 		F52506252AC392C00008FFC3 /* ScreenShotAnalyzerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52506242AC392C00008FFC3 /* ScreenShotAnalyzerTests.swift */; };
 		F525062F2AC392C00008FFC3 /* ScreenShotAnalyzerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F525062E2AC392C00008FFC3 /* ScreenShotAnalyzerUITests.swift */; };
 		F52506312AC392C00008FFC3 /* ScreenShotAnalyzerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52506302AC392C00008FFC3 /* ScreenShotAnalyzerUITestsLaunchTests.swift */; };
+		F525063F2AC6E5A80008FFC3 /* ScreenshotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F525063D2AC6E5A80008FFC3 /* ScreenshotsViewController.swift */; };
+		F52506402AC6E5A80008FFC3 /* ScreenshotsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F525063E2AC6E5A80008FFC3 /* ScreenshotsViewController.xib */; };
+		F52506422AC6E73D0008FFC3 /* ScreenshotsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52506412AC6E73D0008FFC3 /* ScreenshotsViewModel.swift */; };
+		F52506442AC6E9B70008FFC3 /* UIViewController+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52506432AC6E9B70008FFC3 /* UIViewController+Helper.swift */; };
+		F52506462AC6F4360008FFC3 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52506452AC6F4360008FFC3 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,11 @@
 		F525062A2AC392C00008FFC3 /* ScreenShotAnalyzerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScreenShotAnalyzerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F525062E2AC392C00008FFC3 /* ScreenShotAnalyzerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenShotAnalyzerUITests.swift; sourceTree = "<group>"; };
 		F52506302AC392C00008FFC3 /* ScreenShotAnalyzerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenShotAnalyzerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F525063D2AC6E5A80008FFC3 /* ScreenshotsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotsViewController.swift; sourceTree = "<group>"; };
+		F525063E2AC6E5A80008FFC3 /* ScreenshotsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScreenshotsViewController.xib; sourceTree = "<group>"; };
+		F52506412AC6E73D0008FFC3 /* ScreenshotsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotsViewModel.swift; sourceTree = "<group>"; };
+		F52506432AC6E9B70008FFC3 /* UIViewController+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Helper.swift"; sourceTree = "<group>"; };
+		F52506452AC6F4360008FFC3 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +119,11 @@
 				F52506182AC392C00008FFC3 /* LaunchScreen.storyboard */,
 				F525061B2AC392C00008FFC3 /* Info.plist */,
 				F52506132AC392BF0008FFC3 /* ScreenShotAnalyzer.xcdatamodeld */,
+				F525063D2AC6E5A80008FFC3 /* ScreenshotsViewController.swift */,
+				F525063E2AC6E5A80008FFC3 /* ScreenshotsViewController.xib */,
+				F52506412AC6E73D0008FFC3 /* ScreenshotsViewModel.swift */,
+				F52506432AC6E9B70008FFC3 /* UIViewController+Helper.swift */,
+				F52506452AC6F4360008FFC3 /* AppCoordinator.swift */,
 			);
 			path = ScreenShotAnalyzer;
 			sourceTree = "<group>";
@@ -236,6 +251,7 @@
 			files = (
 				F525061A2AC392C00008FFC3 /* LaunchScreen.storyboard in Resources */,
 				F52506172AC392C00008FFC3 /* Assets.xcassets in Resources */,
+				F52506402AC6E5A80008FFC3 /* ScreenshotsViewController.xib in Resources */,
 				F52506122AC392BF0008FFC3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,8 +277,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F52506422AC6E73D0008FFC3 /* ScreenshotsViewModel.swift in Sources */,
 				F525060F2AC392BF0008FFC3 /* ViewController.swift in Sources */,
+				F525063F2AC6E5A80008FFC3 /* ScreenshotsViewController.swift in Sources */,
 				F525060B2AC392BF0008FFC3 /* AppDelegate.swift in Sources */,
+				F52506462AC6F4360008FFC3 /* AppCoordinator.swift in Sources */,
+				F52506442AC6E9B70008FFC3 /* UIViewController+Helper.swift in Sources */,
 				F525060D2AC392BF0008FFC3 /* SceneDelegate.swift in Sources */,
 				F52506152AC392BF0008FFC3 /* ScreenShotAnalyzer.xcdatamodeld in Sources */,
 			);
@@ -441,6 +461,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UGMQQP3AYQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ScreenShotAnalyzer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -468,6 +489,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UGMQQP3AYQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ScreenShotAnalyzer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

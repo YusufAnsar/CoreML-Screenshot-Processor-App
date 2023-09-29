@@ -21,5 +21,9 @@
 			</array>
 		</dict>
 	</dict>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>To analyze screenshots, this application needs access to the photos library.</string>
 </dict>
 </plist>
