@@ -9,12 +9,17 @@ import UIKit
 
 class ScreenShotInfoViewController: UIViewController {
 
-    private let viewModel: ScreenshotInfoViewModelInput
+    @IBOutlet private weak var creationDateLabel: UILabel!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var sizeLabel: UILabel!
+    @IBOutlet private weak var predictionsLabel: UILabel!
 
-    init(viewModel: ScreenshotInfoViewModelInput) {
+    private let viewModel: ScreenshotInfoViewControllerInput
+
+    init(viewModel: ScreenshotInfoViewControllerInput) {
         self.viewModel = viewModel
         super.init(nibName: String(describing: ScreenShotInfoViewController.self), bundle: nil)
-        viewModel.viewController = self
+        viewModel.screenshotInfoViewController = self
     }
 
     required init?(coder: NSCoder) {
@@ -24,11 +29,14 @@ class ScreenShotInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        creationDateLabel.text = viewModel.getCreationDateString()
+        nameLabel.text = viewModel.getName()
+        sizeLabel.text = viewModel.getSizeInfo()
+        predictionsLabel.text = viewModel.getPredictionText()
     }
 
 }
 
-extension ScreenShotInfoViewController: ScreenshotInfoViewModelOutput {
+extension ScreenShotInfoViewController: ScreenshotInfoViewControllerOutput {
     
 }

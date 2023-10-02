@@ -23,7 +23,7 @@
 		F525064A2AC772F00008FFC3 /* ScreenshotCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F52506482AC772F00008FFC3 /* ScreenshotCollectionViewCell.xib */; };
 		F525064D2AC990620008FFC3 /* ScreenShotsGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F525064B2AC990620008FFC3 /* ScreenShotsGalleryViewController.swift */; };
 		F525064E2AC990620008FFC3 /* ScreenShotsGalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F525064C2AC990620008FFC3 /* ScreenShotsGalleryViewController.xib */; };
-		F52506502AC9971D0008FFC3 /* ScreenShotsGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F525064F2AC9971D0008FFC3 /* ScreenShotsGalleryViewModel.swift */; };
+		F52506502AC9971D0008FFC3 /* ScreenShotsGalleryViewControllerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F525064F2AC9971D0008FFC3 /* ScreenShotsGalleryViewControllerProtocols.swift */; };
 		F52506522AC9982E0008FFC3 /* ScreenshotsViewModelCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52506512AC9982E0008FFC3 /* ScreenshotsViewModelCoordinatorDelegate.swift */; };
 		F52506542ACA4D1E0008FFC3 /* ScreenshotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52506532ACA4D1E0008FFC3 /* ScreenshotModel.swift */; };
 		F52506562ACA52720008FFC3 /* ImagePredictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52506552ACA52720008FFC3 /* ImagePredictor.swift */; };
@@ -33,7 +33,8 @@
 		F52506612ACADE960008FFC3 /* ScreenShotDetailTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52506602ACADE960008FFC3 /* ScreenShotDetailTabBarController.swift */; };
 		F52506642ACAE6400008FFC3 /* ScreenShotInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52506622ACAE6400008FFC3 /* ScreenShotInfoViewController.swift */; };
 		F52506652ACAE6400008FFC3 /* ScreenShotInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F52506632ACAE6400008FFC3 /* ScreenShotInfoViewController.xib */; };
-		F52506672ACAE7330008FFC3 /* ScreenshotInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52506662ACAE7330008FFC3 /* ScreenshotInfoViewModel.swift */; };
+		F52506672ACAE7330008FFC3 /* ScreenshotInfoViewControllerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52506662ACAE7330008FFC3 /* ScreenshotInfoViewControllerProtocols.swift */; };
+		F52506692ACB15860008FFC3 /* ScreenShotDetailTabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52506682ACB15850008FFC3 /* ScreenShotDetailTabBarViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +75,7 @@
 		F52506482AC772F00008FFC3 /* ScreenshotCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScreenshotCollectionViewCell.xib; sourceTree = "<group>"; };
 		F525064B2AC990620008FFC3 /* ScreenShotsGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenShotsGalleryViewController.swift; sourceTree = "<group>"; };
 		F525064C2AC990620008FFC3 /* ScreenShotsGalleryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScreenShotsGalleryViewController.xib; sourceTree = "<group>"; };
-		F525064F2AC9971D0008FFC3 /* ScreenShotsGalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenShotsGalleryViewModel.swift; sourceTree = "<group>"; };
+		F525064F2AC9971D0008FFC3 /* ScreenShotsGalleryViewControllerProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenShotsGalleryViewControllerProtocols.swift; sourceTree = "<group>"; };
 		F52506512AC9982E0008FFC3 /* ScreenshotsViewModelCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotsViewModelCoordinatorDelegate.swift; sourceTree = "<group>"; };
 		F52506532ACA4D1E0008FFC3 /* ScreenshotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotModel.swift; sourceTree = "<group>"; };
 		F52506552ACA52720008FFC3 /* ImagePredictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePredictor.swift; sourceTree = "<group>"; };
@@ -84,7 +85,8 @@
 		F52506602ACADE960008FFC3 /* ScreenShotDetailTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenShotDetailTabBarController.swift; sourceTree = "<group>"; };
 		F52506622ACAE6400008FFC3 /* ScreenShotInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenShotInfoViewController.swift; sourceTree = "<group>"; };
 		F52506632ACAE6400008FFC3 /* ScreenShotInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScreenShotInfoViewController.xib; sourceTree = "<group>"; };
-		F52506662ACAE7330008FFC3 /* ScreenshotInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotInfoViewModel.swift; sourceTree = "<group>"; };
+		F52506662ACAE7330008FFC3 /* ScreenshotInfoViewControllerProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotInfoViewControllerProtocols.swift; sourceTree = "<group>"; };
+		F52506682ACB15850008FFC3 /* ScreenShotDetailTabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenShotDetailTabBarViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,8 +147,8 @@
 				F525063D2AC6E5A80008FFC3 /* ScreenshotsViewController.swift */,
 				F525063E2AC6E5A80008FFC3 /* ScreenshotsViewController.xib */,
 				F52506412AC6E73D0008FFC3 /* ScreenshotsViewModel.swift */,
-				F525064F2AC9971D0008FFC3 /* ScreenShotsGalleryViewModel.swift */,
-				F52506662ACAE7330008FFC3 /* ScreenshotInfoViewModel.swift */,
+				F525064F2AC9971D0008FFC3 /* ScreenShotsGalleryViewControllerProtocols.swift */,
+				F52506662ACAE7330008FFC3 /* ScreenshotInfoViewControllerProtocols.swift */,
 				F52506452AC6F4360008FFC3 /* AppCoordinator.swift */,
 				F52506472AC772F00008FFC3 /* ScreenshotCollectionViewCell.swift */,
 				F52506482AC772F00008FFC3 /* ScreenshotCollectionViewCell.xib */,
@@ -157,6 +159,7 @@
 				F52506552ACA52720008FFC3 /* ImagePredictor.swift */,
 				F52506572ACA53430008FFC3 /* MobileNetV2.mlmodel */,
 				F52506602ACADE960008FFC3 /* ScreenShotDetailTabBarController.swift */,
+				F52506682ACB15850008FFC3 /* ScreenShotDetailTabBarViewModel.swift */,
 				F52506622ACAE6400008FFC3 /* ScreenShotInfoViewController.swift */,
 				F52506632ACAE6400008FFC3 /* ScreenShotInfoViewController.xib */,
 			);
@@ -325,12 +328,13 @@
 			files = (
 				F52506422AC6E73D0008FFC3 /* ScreenshotsViewModel.swift in Sources */,
 				F52506642ACAE6400008FFC3 /* ScreenShotInfoViewController.swift in Sources */,
-				F52506672ACAE7330008FFC3 /* ScreenshotInfoViewModel.swift in Sources */,
+				F52506672ACAE7330008FFC3 /* ScreenshotInfoViewControllerProtocols.swift in Sources */,
 				F525063F2AC6E5A80008FFC3 /* ScreenshotsViewController.swift in Sources */,
 				F52506612ACADE960008FFC3 /* ScreenShotDetailTabBarController.swift in Sources */,
 				F525065B2ACA573F0008FFC3 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */,
 				F525060B2AC392BF0008FFC3 /* AppDelegate.swift in Sources */,
 				F52506462AC6F4360008FFC3 /* AppCoordinator.swift in Sources */,
+				F52506692ACB15860008FFC3 /* ScreenShotDetailTabBarViewModel.swift in Sources */,
 				F52506522AC9982E0008FFC3 /* ScreenshotsViewModelCoordinatorDelegate.swift in Sources */,
 				F52506492AC772F00008FFC3 /* ScreenshotCollectionViewCell.swift in Sources */,
 				F525060D2AC392BF0008FFC3 /* SceneDelegate.swift in Sources */,
@@ -340,7 +344,7 @@
 				F525064D2AC990620008FFC3 /* ScreenShotsGalleryViewController.swift in Sources */,
 				F52506562ACA52720008FFC3 /* ImagePredictor.swift in Sources */,
 				F52506582ACA53430008FFC3 /* MobileNetV2.mlmodel in Sources */,
-				F52506502AC9971D0008FFC3 /* ScreenShotsGalleryViewModel.swift in Sources */,
+				F52506502AC9971D0008FFC3 /* ScreenShotsGalleryViewControllerProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

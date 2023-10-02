@@ -30,13 +30,11 @@ class AppCoordinator {
 extension AppCoordinator: ScreenshotsViewModelCoordinatorDelegate {
 
     func screenshotsViewModel(_ viewModel: ScreenshotsViewModel, didSelectImageAtIndex index: Int) {
-        let screenshotInfoViewModel = ScreenshotInfoViewModel()
-        let screenshotInfoVC = ScreenShotInfoViewController(viewModel: screenshotInfoViewModel)
+        let tabBarViewModel = ScreenShotDetailTabBarViewModel(screenshots: viewModel.screenshots, selectedIndex: index)
+        let screenshotInfoVC = ScreenShotInfoViewController(viewModel: tabBarViewModel)
+        let screenShotsGalleryVC = ScreenShotsGalleryViewController(viewModel: tabBarViewModel)
 
-        let screenShotsGalleryViewModel = ScreenShotsGalleryViewModel()
-        let screenShotsGalleryVC = ScreenShotsGalleryViewController(viewModel: screenShotsGalleryViewModel)
-
-        let tabBarController = ScreenShotDetailTabBarController(withScreenShotInfoViewController: screenshotInfoVC, screenshotsGalleryViewController: screenShotsGalleryVC)
+        let tabBarController = ScreenShotDetailTabBarController(withViewModel: tabBarViewModel, screenShotInfoViewController: screenshotInfoVC, screenshotsGalleryViewController: screenShotsGalleryVC)
         navigationController.pushViewController(tabBarController, animated: true)
     }
 }

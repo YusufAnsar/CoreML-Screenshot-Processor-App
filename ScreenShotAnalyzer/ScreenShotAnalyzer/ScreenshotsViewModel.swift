@@ -26,6 +26,7 @@ final class ScreenshotsViewModel {
     weak var viewController: ScreenshotsViewModelOutput?
     weak var coordinatorDelegate: ScreenshotsViewModelCoordinatorDelegate?
     private lazy var imagePredictor = ImagePredictor()
+    private static let maxPredictions = 10
 
     init() {
 
@@ -99,7 +100,7 @@ final class ScreenshotsViewModel {
     /// - Tag: formatPredictions
     private func formatPredictions(_ predictions: [ImagePredictor.Prediction]) -> [String] {
         // Vision sorts the classifications in descending confidence order.
-        let predictions: [String] = predictions.map { prediction in
+        let predictions: [String] = predictions.prefix(Self.maxPredictions).map { prediction in
             var name = prediction.classification
 
             // For classifications with more than one name, keep the one before the first comma.

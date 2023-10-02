@@ -8,16 +8,21 @@
 import UIKit
 
 class ScreenShotDetailTabBarController: UITabBarController {
-    let shareVC: UIViewController
-    let screenShotInfoViewController: ScreenShotInfoViewController
-    let screenShotsGalleryViewController: ScreenShotsGalleryViewController
+    private let shareVC: UIViewController
+    private let screenShotInfoViewController: ScreenShotInfoViewController
+    private let screenShotsGalleryViewController: ScreenShotsGalleryViewController
 
-    init(withScreenShotInfoViewController screenShotInfoViewController: ScreenShotInfoViewController,
+    private let viewModel: ScreenShotDetailTabBarViewModelInput
+
+    init(withViewModel viewModel: ScreenShotDetailTabBarViewModelInput,
+         screenShotInfoViewController: ScreenShotInfoViewController,
          screenshotsGalleryViewController: ScreenShotsGalleryViewController) {
+        self.viewModel = viewModel
         self.shareVC = UIViewController()
         self.screenShotInfoViewController = screenShotInfoViewController
         self.screenShotsGalleryViewController = screenshotsGalleryViewController
         super.init(nibName: nil, bundle: nil)
+        viewModel.viewController = self
     }
 
     required init?(coder: NSCoder) {
@@ -62,7 +67,11 @@ extension ScreenShotDetailTabBarController: UITabBarControllerDelegate {
     }
 
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-
+        print(viewController)
     }
+}
+
+extension ScreenShotDetailTabBarController: ScreenShotDetailTabBarViewModelOutput {
+    
 }
 

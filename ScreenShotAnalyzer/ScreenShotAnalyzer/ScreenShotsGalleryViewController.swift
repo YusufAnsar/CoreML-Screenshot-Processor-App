@@ -9,12 +9,12 @@ import UIKit
 
 class ScreenShotsGalleryViewController: UIViewController {
 
-    private let viewModel: ScreenShotsGalleryViewModelInput
+    private let viewModel: ScreenShotsGalleryViewControllerInput
 
-    init(viewModel: ScreenShotsGalleryViewModelInput) {
+    init(viewModel: ScreenShotsGalleryViewControllerInput) {
         self.viewModel = viewModel
         super.init(nibName: String(describing: ScreenShotsGalleryViewController.self), bundle: nil)
-        viewModel.viewController = self
+        viewModel.galleryViewController = self
     }
 
     required init?(coder: NSCoder) {
@@ -29,6 +29,6 @@ class ScreenShotsGalleryViewController: UIViewController {
 
 }
 
-extension ScreenShotsGalleryViewController: ScreenShotsGalleryViewModelOutput {
+extension ScreenShotsGalleryViewController: ScreenShotsGalleryViewControllerOutput {
     
 }
