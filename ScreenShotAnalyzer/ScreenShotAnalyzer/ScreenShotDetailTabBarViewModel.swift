@@ -44,6 +44,10 @@ extension ScreenShotDetailTabBarViewModel: ScreenShotDetailTabBarViewModelInput 
 
 extension ScreenShotDetailTabBarViewModel: ScreenshotInfoViewControllerInput {
 
+    func getScreenshotNote() -> String? {
+        currentScreenshot?.note
+    }
+
     func getCreationDateString() -> String? {
         guard let currentScreenshot = currentScreenshot,
               let date = currentScreenshot.creationDate else {
@@ -71,6 +75,13 @@ extension ScreenShotDetailTabBarViewModel: ScreenshotInfoViewControllerInput {
 
     func getPredictionText() -> String? {
         currentScreenshot?.predictionOutput
+    }
+
+    func update(screenshotNote: String?) {
+        guard let currentScreenshot = currentScreenshot else {
+            return
+        }
+        currentScreenshot.note = screenshotNote
     }
 
 }

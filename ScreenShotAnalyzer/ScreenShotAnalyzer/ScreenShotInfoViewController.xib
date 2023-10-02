@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="creationDateLabel" destination="Adc-Sg-GMF" id="TA3-Dh-nJL"/>
                 <outlet property="nameLabel" destination="qbi-9M-1IM" id="E5I-Nx-e0E"/>
+                <outlet property="noteTextField" destination="Exc-LJ-YVT" id="4p3-Be-Srp"/>
                 <outlet property="predictionsLabel" destination="vmq-5T-9hc" id="sW6-Xr-YF1"/>
                 <outlet property="sizeLabel" destination="GKd-l1-x2s" id="o5M-Yp-OQT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

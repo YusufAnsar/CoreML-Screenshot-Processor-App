@@ -9,6 +9,7 @@ import UIKit
 
 class ScreenShotInfoViewController: UIViewController {
 
+    @IBOutlet private weak var noteTextField: UITextField!
     @IBOutlet private weak var creationDateLabel: UILabel!
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var sizeLabel: UILabel!
@@ -29,14 +30,30 @@ class ScreenShotInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        noteTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        noteTextField.delegate = self
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        noteTextField.text = viewModel.getScreenshotNote()
         creationDateLabel.text = viewModel.getCreationDateString()
         nameLabel.text = viewModel.getName()
         sizeLabel.text = viewModel.getSizeInfo()
         predictionsLabel.text = viewModel.getPredictionText()
     }
 
+    @objc private func textFieldDidChange(_ textField: UITextField) {
+        viewModel.update(screenshotNote: textField.text)
+   }
+
 }
 
-extension ScreenShotInfoViewController: ScreenshotInfoViewControllerOutput {
-    
+extension ScreenShotInfoViewController: UITextFieldDelegate {
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }

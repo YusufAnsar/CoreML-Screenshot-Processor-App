@@ -9,13 +9,10 @@ import Foundation
 
 
 protocol ScreenshotInfoViewControllerInput: AnyObject {
-    var screenshotInfoViewController: ScreenshotInfoViewControllerOutput? { get set }
+    func getScreenshotNote() -> String?
     func getCreationDateString() -> String?
     func getName() -> String?
     func getSizeInfo() -> String?
     func getPredictionText() -> String?
-}
-
-protocol ScreenshotInfoViewControllerOutput: AnyObject {
-
+    func update(screenshotNote: String?)
 }
