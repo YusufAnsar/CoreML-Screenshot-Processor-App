@@ -21,7 +21,22 @@ class AppCoordinator {
 
     private func showScreenshotsScreen() {
         let viewModel = ScreenshotsViewModel()
+        viewModel.coordinatorDelegate = self
         let screenshotsVC = ScreenshotsViewController(viewModel: viewModel)
         navigationController.setViewControllers([screenshotsVC], animated: false)
+    }
+}
+
+extension AppCoordinator: ScreenshotsViewModelCoordinatorDelegate {
+
+    func screenshotsViewModel(_ viewModel: ScreenshotsViewModel, didSelectImageAtIndex index: Int) {
+        let screenshotInfoViewModel = ScreenshotInfoViewModel()
+        let screenshotInfoVC = ScreenShotInfoViewController(viewModel: screenshotInfoViewModel)
+
+        let screenShotsGalleryViewModel = ScreenShotsGalleryViewModel()
+        let screenShotsGalleryVC = ScreenShotsGalleryViewController(viewModel: screenShotsGalleryViewModel)
+
+        let tabBarController = ScreenShotDetailTabBarController(withScreenShotInfoViewController: screenshotInfoVC, screenshotsGalleryViewController: screenShotsGalleryVC)
+        navigationController.pushViewController(tabBarController, animated: true)
     }
 }

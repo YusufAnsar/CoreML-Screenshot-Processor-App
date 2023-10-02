@@ -26,7 +26,7 @@ class ScreenshotsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        title = "Screenshots"
         collectionView.register(UINib(nibName: "ScreenshotCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ScreenshotCollectionViewCell")
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -43,15 +43,18 @@ extension ScreenshotsViewController: UICollectionViewDataSource, UICollectionVie
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("count \(viewModel.images.count)")
-        return viewModel.images.count
+        // print("count \(viewModel.screenshots.count)")
+        return viewModel.screenshots.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ScreenshotCollectionViewCell", for: indexPath) as? ScreenshotCollectionViewCell else {
             return UICollectionViewCell()
         }
-        cell.screenshotImageView.image = viewModel.images[indexPath.item]
+        if let screenshotModel = viewModel.screenshots[indexPath.item] as? ScreenshotModel {
+            cell.screenshotImageView.image = screenshotModel.image
+            print("prediction:" + (screenshotModel.predictionOutput ?? ""))
+        }
         return cell
     }
 
@@ -62,12 +65,16 @@ extension ScreenshotsViewController: UICollectionViewDataSource, UICollectionVie
         return CGSize(width: width, height: height)
     }
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel.didSelectImage(at: indexPath.item)
+    }
+
 }
 
 extension ScreenshotsViewController: ScreenshotsViewModelOutput {
 
     func reloadScreenshots() {
-        titleLabel.text = "\(viewModel.images.count) screenshots imported"
+        titleLabel.text = "\(viewModel.screenshots.count) screenshots imported"
         collectionView.reloadData()
     }
 }
