@@ -5,11 +5,12 @@
 //  Created by maple on 02/10/23.
 //
 
-import Foundation
-
+import UIKit
 
 protocol ScreenShotDetailTabBarViewModelInput: AnyObject {
     var viewController: ScreenShotDetailTabBarViewModelOutput? { get set }
+    func getCurrentScreenshotImage() -> UIImage?
+    func getScreenshotNote() -> String?
     func deleteCurrentScreenshot()
 }
 
@@ -48,6 +49,10 @@ final class ScreenShotDetailTabBarViewModel {
 
 
 extension ScreenShotDetailTabBarViewModel: ScreenShotDetailTabBarViewModelInput {
+
+    func getCurrentScreenshotImage() -> UIImage? {
+        currentScreenshot?.image
+    }
 
     func deleteCurrentScreenshot() {
         screenshots.removeObject(at: selectedIndex)

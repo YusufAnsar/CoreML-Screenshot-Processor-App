@@ -47,9 +47,10 @@ class ScreenShotDetailTabBarController: UITabBarController {
     }
 
     private func showShareActivity() {
-        let image = UIImage(systemName: "info.circle")
-        let imageShare = [ image! ]
-        let activityViewController = UIActivityViewController(activityItems: imageShare , applicationActivities: nil)
+        guard let image = viewModel.getCurrentScreenshotImage() else {
+            return
+        }
+        let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self.view
         self.present(activityViewController, animated: true, completion: nil)
     }
