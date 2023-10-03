@@ -15,6 +15,7 @@
                 <outlet property="nameLabel" destination="Jla-iT-FxA" id="1s4-od-Krp"/>
                 <outlet property="noteTextField" destination="utM-gX-l9y" id="TVo-yh-xBr"/>
                 <outlet property="predictionsLabel" destination="wkg-X7-Te9" id="rAj-aQ-ZhR"/>
+                <outlet property="scrollView" destination="tZ4-Eq-mu6" id="5OM-rE-AaT"/>
                 <outlet property="sizeLabel" destination="xZ3-fc-YTy" id="YEq-0b-0HO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
