@@ -151,36 +151,17 @@
 		F52506092AC392BF0008FFC3 /* ScreenShotAnalyzer */ = {
 			isa = PBXGroup;
 			children = (
-				F52506592ACA56ED0008FFC3 /* Extensions */,
 				F525060A2AC392BF0008FFC3 /* AppDelegate.swift */,
 				F525060C2AC392BF0008FFC3 /* SceneDelegate.swift */,
+				F52506452AC6F4360008FFC3 /* AppCoordinator.swift */,
+				F52506792ACC2F2D0008FFC3 /* Screenshots screen */,
+				F52506592ACA56ED0008FFC3 /* Extensions */,
+				F52506572ACA53430008FFC3 /* MobileNetV2.mlmodel */,
 				F52506162AC392C00008FFC3 /* Assets.xcassets */,
 				F52506182AC392C00008FFC3 /* LaunchScreen.storyboard */,
 				F525061B2AC392C00008FFC3 /* Info.plist */,
 				F52506132AC392BF0008FFC3 /* ScreenShotAnalyzer.xcdatamodeld */,
-				F525063D2AC6E5A80008FFC3 /* ScreenshotsViewController.swift */,
-				F525063E2AC6E5A80008FFC3 /* ScreenshotsViewController.xib */,
-				F52506412AC6E73D0008FFC3 /* ScreenshotsViewModel.swift */,
-				F525064F2AC9971D0008FFC3 /* ScreenShotsGalleryViewControllerProtocols.swift */,
-				F52506662ACAE7330008FFC3 /* ScreenshotInfoViewControllerProtocols.swift */,
-				F52506452AC6F4360008FFC3 /* AppCoordinator.swift */,
-				F52506472AC772F00008FFC3 /* ScreenshotCollectionViewCell.swift */,
-				F52506482AC772F00008FFC3 /* ScreenshotCollectionViewCell.xib */,
-				F525064B2AC990620008FFC3 /* ScreenShotsGalleryViewController.swift */,
-				F525066A2ACB59FB0008FFC3 /* ScreenshotDetailsViewController.swift */,
-				F525066E2ACB72BC0008FFC3 /* ScreenshotDetailsViewModel.swift */,
-				F525066B2ACB59FB0008FFC3 /* ScreenshotDetailsViewController.xib */,
-				F525064C2AC990620008FFC3 /* ScreenShotsGalleryViewController.xib */,
-				F52506512AC9982E0008FFC3 /* ScreenshotsViewModelCoordinatorDelegate.swift */,
-				F52506532ACA4D1E0008FFC3 /* ScreenshotModel.swift */,
-				F52506552ACA52720008FFC3 /* ImagePredictor.swift */,
-				F52506572ACA53430008FFC3 /* MobileNetV2.mlmodel */,
-				F52506602ACADE960008FFC3 /* ScreenShotDetailTabBarController.swift */,
-				F52506682ACB15850008FFC3 /* ScreenShotDetailTabBarViewModel.swift */,
-				F52506622ACAE6400008FFC3 /* ScreenShotInfoViewController.swift */,
-				F52506632ACAE6400008FFC3 /* ScreenShotInfoViewController.xib */,
-				F52506702ACB7DDB0008FFC3 /* CarouselCollectionViewCell.swift */,
-				F52506712ACB7DDB0008FFC3 /* CarouselCollectionViewCell.xib */,
+				F525067A2ACC2FDE0008FFC3 /* Screen Detail TabBar */,
 			);
 			path = ScreenShotAnalyzer;
 			sourceTree = "<group>";
@@ -211,6 +192,57 @@
 				F52506762ACB9C6C0008FFC3 /* UIView+AutoLayoutHelpers.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F52506792ACC2F2D0008FFC3 /* Screenshots screen */ = {
+			isa = PBXGroup;
+			children = (
+				F52506472AC772F00008FFC3 /* ScreenshotCollectionViewCell.swift */,
+				F52506482AC772F00008FFC3 /* ScreenshotCollectionViewCell.xib */,
+				F52506532ACA4D1E0008FFC3 /* ScreenshotModel.swift */,
+				F52506552ACA52720008FFC3 /* ImagePredictor.swift */,
+				F52506512AC9982E0008FFC3 /* ScreenshotsViewModelCoordinatorDelegate.swift */,
+				F525063D2AC6E5A80008FFC3 /* ScreenshotsViewController.swift */,
+				F525063E2AC6E5A80008FFC3 /* ScreenshotsViewController.xib */,
+				F52506412AC6E73D0008FFC3 /* ScreenshotsViewModel.swift */,
+			);
+			path = "Screenshots screen";
+			sourceTree = "<group>";
+		};
+		F525067A2ACC2FDE0008FFC3 /* Screen Detail TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				F525067C2ACC301C0008FFC3 /* DeleteTab */,
+				F525067B2ACC2FFC0008FFC3 /* InfoTab */,
+			);
+			path = "Screen Detail TabBar";
+			sourceTree = "<group>";
+		};
+		F525067B2ACC2FFC0008FFC3 /* InfoTab */ = {
+			isa = PBXGroup;
+			children = (
+				F52506662ACAE7330008FFC3 /* ScreenshotInfoViewControllerProtocols.swift */,
+				F52506622ACAE6400008FFC3 /* ScreenShotInfoViewController.swift */,
+				F52506632ACAE6400008FFC3 /* ScreenShotInfoViewController.xib */,
+			);
+			path = InfoTab;
+			sourceTree = "<group>";
+		};
+		F525067C2ACC301C0008FFC3 /* DeleteTab */ = {
+			isa = PBXGroup;
+			children = (
+				F525064F2AC9971D0008FFC3 /* ScreenShotsGalleryViewControllerProtocols.swift */,
+				F525064B2AC990620008FFC3 /* ScreenShotsGalleryViewController.swift */,
+				F525066A2ACB59FB0008FFC3 /* ScreenshotDetailsViewController.swift */,
+				F525066E2ACB72BC0008FFC3 /* ScreenshotDetailsViewModel.swift */,
+				F525066B2ACB59FB0008FFC3 /* ScreenshotDetailsViewController.xib */,
+				F525064C2AC990620008FFC3 /* ScreenShotsGalleryViewController.xib */,
+				F52506602ACADE960008FFC3 /* ScreenShotDetailTabBarController.swift */,
+				F52506682ACB15850008FFC3 /* ScreenShotDetailTabBarViewModel.swift */,
+				F52506702ACB7DDB0008FFC3 /* CarouselCollectionViewCell.swift */,
+				F52506712ACB7DDB0008FFC3 /* CarouselCollectionViewCell.xib */,
+			);
+			path = DeleteTab;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
