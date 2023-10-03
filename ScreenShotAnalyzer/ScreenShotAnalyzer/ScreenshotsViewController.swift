@@ -33,6 +33,12 @@ class ScreenshotsViewController: UIViewController {
         collectionView.reloadData()
         viewModel.importPhotos()
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        reloadScreenshots()
+    }
 }
 
 
