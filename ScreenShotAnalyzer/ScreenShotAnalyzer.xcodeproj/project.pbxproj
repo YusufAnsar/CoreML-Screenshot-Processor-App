@@ -26,8 +26,6 @@
 		F52506502AC9971D0008FFC3 /* ScreenShotsGalleryViewControllerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F525064F2AC9971D0008FFC3 /* ScreenShotsGalleryViewControllerProtocols.swift */; };
 		F52506522AC9982E0008FFC3 /* ScreenshotsViewModelCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52506512AC9982E0008FFC3 /* ScreenshotsViewModelCoordinatorDelegate.swift */; };
 		F52506542ACA4D1E0008FFC3 /* ScreenshotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52506532ACA4D1E0008FFC3 /* ScreenshotModel.swift */; };
-		F52506562ACA52720008FFC3 /* ImagePredictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52506552ACA52720008FFC3 /* ImagePredictor.swift */; };
-		F52506582ACA53430008FFC3 /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F52506572ACA53430008FFC3 /* MobileNetV2.mlmodel */; };
 		F525065B2ACA573F0008FFC3 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F525065A2ACA573F0008FFC3 /* CGImagePropertyOrientation+UIImageOrientation.swift */; };
 		F525065D2ACA57790008FFC3 /* VNClassificationObservation+confidenceString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F525065C2ACA57790008FFC3 /* VNClassificationObservation+confidenceString.swift */; };
 		F52506612ACADE960008FFC3 /* ScreenShotDetailTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52506602ACADE960008FFC3 /* ScreenShotDetailTabBarController.swift */; };
@@ -85,8 +83,6 @@
 		F525064F2AC9971D0008FFC3 /* ScreenShotsGalleryViewControllerProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenShotsGalleryViewControllerProtocols.swift; sourceTree = "<group>"; };
 		F52506512AC9982E0008FFC3 /* ScreenshotsViewModelCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotsViewModelCoordinatorDelegate.swift; sourceTree = "<group>"; };
 		F52506532ACA4D1E0008FFC3 /* ScreenshotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotModel.swift; sourceTree = "<group>"; };
-		F52506552ACA52720008FFC3 /* ImagePredictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePredictor.swift; sourceTree = "<group>"; };
-		F52506572ACA53430008FFC3 /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
 		F525065A2ACA573F0008FFC3 /* CGImagePropertyOrientation+UIImageOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGImagePropertyOrientation+UIImageOrientation.swift"; sourceTree = "<group>"; };
 		F525065C2ACA57790008FFC3 /* VNClassificationObservation+confidenceString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VNClassificationObservation+confidenceString.swift"; sourceTree = "<group>"; };
 		F52506602ACADE960008FFC3 /* ScreenShotDetailTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenShotDetailTabBarController.swift; sourceTree = "<group>"; };
@@ -156,7 +152,6 @@
 				F52506452AC6F4360008FFC3 /* AppCoordinator.swift */,
 				F52506792ACC2F2D0008FFC3 /* Screenshots screen */,
 				F52506592ACA56ED0008FFC3 /* Extensions */,
-				F52506572ACA53430008FFC3 /* MobileNetV2.mlmodel */,
 				F52506162AC392C00008FFC3 /* Assets.xcassets */,
 				F52506182AC392C00008FFC3 /* LaunchScreen.storyboard */,
 				F525061B2AC392C00008FFC3 /* Info.plist */,
@@ -200,7 +195,6 @@
 				F52506472AC772F00008FFC3 /* ScreenshotCollectionViewCell.swift */,
 				F52506482AC772F00008FFC3 /* ScreenshotCollectionViewCell.xib */,
 				F52506532ACA4D1E0008FFC3 /* ScreenshotModel.swift */,
-				F52506552ACA52720008FFC3 /* ImagePredictor.swift */,
 				F52506512AC9982E0008FFC3 /* ScreenshotsViewModelCoordinatorDelegate.swift */,
 				F525063D2AC6E5A80008FFC3 /* ScreenshotsViewController.swift */,
 				F525063E2AC6E5A80008FFC3 /* ScreenshotsViewController.xib */,
@@ -401,9 +395,7 @@
 				F52506152AC392BF0008FFC3 /* ScreenShotAnalyzer.xcdatamodeld in Sources */,
 				F52506722ACB7DDB0008FFC3 /* CarouselCollectionViewCell.swift in Sources */,
 				F525064D2AC990620008FFC3 /* ScreenShotsGalleryViewController.swift in Sources */,
-				F52506562ACA52720008FFC3 /* ImagePredictor.swift in Sources */,
 				F525066F2ACB72BC0008FFC3 /* ScreenshotDetailsViewModel.swift in Sources */,
-				F52506582ACA53430008FFC3 /* MobileNetV2.mlmodel in Sources */,
 				F52506502AC9971D0008FFC3 /* ScreenShotsGalleryViewControllerProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

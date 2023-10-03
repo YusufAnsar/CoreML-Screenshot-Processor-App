@@ -25,7 +25,6 @@ final class ScreenshotsViewModel {
     lazy var screenshots = NSMutableArray()
     weak var viewController: ScreenshotsViewModelOutput?
     weak var coordinatorDelegate: ScreenshotsViewModelCoordinatorDelegate?
-    private lazy var imagePredictor = ImagePredictor()
     private static let maxPredictions = 10
 
     init() {
@@ -65,8 +64,8 @@ final class ScreenshotsViewModel {
                         DispatchQueue.main.async {
                             self.screenshots.add(screenshotModel)
                             self.viewController?.reloadScreenshots()
-                            self.classify(screenshot: screenshotModel)
                         }
+                        self.process(screenshot: screenshotModel)
                     } else {
                         print("error asset to image")
                     }
@@ -77,43 +76,34 @@ final class ScreenshotsViewModel {
         }
     }
 
-    private func classify(screenshot: ScreenshotModel) {
-        do {
-            try self.imagePredictor.makePredictions(for: screenshot.image) { [weak self] predictions in
-                DispatchQueue.main.async {
-                    guard let self = self else { return }
-                    var description: String?
-                    if let predictions = predictions {
-                        let formattedPredictions = self.formatPredictions(predictions)
-                        description = formattedPredictions.joined(separator: "\n")
-                    }
-                    screenshot.predictionOutput = description
-                }
-            }
-        } catch {
-            print("Vision was unable to make a prediction...\n\n\(error.localizedDescription)")
-        }
-    }
+    private func process(screenshot: ScreenshotModel) {
+        if let cgImage = screenshot.image.cgImage {
+            let requestHandler = VNImageRequestHandler(cgImage: cgImage)
 
-    /// Converts a prediction's observations into human-readable strings.
-    /// - Parameter observations: The classification observations from a Vision request.
-    /// - Tag: formatPredictions
-    private func formatPredictions(_ predictions: [ImagePredictor.Prediction]) -> [String] {
-        // Vision sorts the classifications in descending confidence order.
-        let predictions: [String] = predictions.prefix(Self.maxPredictions).map { prediction in
-            var name = prediction.classification
-
-            // For classifications with more than one name, keep the one before the first comma.
-            if let firstComma = name.firstIndex(of: ",") {
-                name = String(name.prefix(upTo: firstComma))
+          let recognizeTextRequest = VNRecognizeTextRequest { (request, error) in
+            // 1. Parse the results
+            guard let observations = request.results as? [VNRecognizedTextObservation] else {
+              return
             }
 
-            return "\(name) - \(prediction.confidencePercentage)%"
+            // 2. Extract the data you want
+            let recognizedStrings = observations.compactMap { observation in
+              observation.topCandidates(1).first?.string
+            }
+              screenshot.predictionOutput = recognizedStrings.joined(separator: " ")
+          }
+
+          recognizeTextRequest.recognitionLevel = .fast
+
+          DispatchQueue.global(qos: .userInitiated).async {
+            do {
+              try requestHandler.perform([recognizeTextRequest])
+            } catch {
+              print(error)
+            }
+          }
         }
-
-        return predictions
     }
-
 }
 
 extension ScreenshotsViewModel: ScreenshotsViewModelInput {
