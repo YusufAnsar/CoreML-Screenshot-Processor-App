@@ -35,6 +35,13 @@
 		F52506652ACAE6400008FFC3 /* ScreenShotInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F52506632ACAE6400008FFC3 /* ScreenShotInfoViewController.xib */; };
 		F52506672ACAE7330008FFC3 /* ScreenshotInfoViewControllerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52506662ACAE7330008FFC3 /* ScreenshotInfoViewControllerProtocols.swift */; };
 		F52506692ACB15860008FFC3 /* ScreenShotDetailTabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52506682ACB15850008FFC3 /* ScreenShotDetailTabBarViewModel.swift */; };
+		F525066C2ACB59FB0008FFC3 /* ScreenshotDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F525066A2ACB59FB0008FFC3 /* ScreenshotDetailsViewController.swift */; };
+		F525066D2ACB59FB0008FFC3 /* ScreenshotDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F525066B2ACB59FB0008FFC3 /* ScreenshotDetailsViewController.xib */; };
+		F525066F2ACB72BC0008FFC3 /* ScreenshotDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F525066E2ACB72BC0008FFC3 /* ScreenshotDetailsViewModel.swift */; };
+		F52506722ACB7DDB0008FFC3 /* CarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52506702ACB7DDB0008FFC3 /* CarouselCollectionViewCell.swift */; };
+		F52506732ACB7DDB0008FFC3 /* CarouselCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F52506712ACB7DDB0008FFC3 /* CarouselCollectionViewCell.xib */; };
+		F52506752ACB9C200008FFC3 /* UIViewController+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52506742ACB9C200008FFC3 /* UIViewController+Helper.swift */; };
+		F52506772ACB9C6C0008FFC3 /* UIView+AutoLayoutHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52506762ACB9C6C0008FFC3 /* UIView+AutoLayoutHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +94,13 @@
 		F52506632ACAE6400008FFC3 /* ScreenShotInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScreenShotInfoViewController.xib; sourceTree = "<group>"; };
 		F52506662ACAE7330008FFC3 /* ScreenshotInfoViewControllerProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotInfoViewControllerProtocols.swift; sourceTree = "<group>"; };
 		F52506682ACB15850008FFC3 /* ScreenShotDetailTabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenShotDetailTabBarViewModel.swift; sourceTree = "<group>"; };
+		F525066A2ACB59FB0008FFC3 /* ScreenshotDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotDetailsViewController.swift; sourceTree = "<group>"; };
+		F525066B2ACB59FB0008FFC3 /* ScreenshotDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScreenshotDetailsViewController.xib; sourceTree = "<group>"; };
+		F525066E2ACB72BC0008FFC3 /* ScreenshotDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotDetailsViewModel.swift; sourceTree = "<group>"; };
+		F52506702ACB7DDB0008FFC3 /* CarouselCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCollectionViewCell.swift; sourceTree = "<group>"; };
+		F52506712ACB7DDB0008FFC3 /* CarouselCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselCollectionViewCell.xib; sourceTree = "<group>"; };
+		F52506742ACB9C200008FFC3 /* UIViewController+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Helper.swift"; sourceTree = "<group>"; };
+		F52506762ACB9C6C0008FFC3 /* UIView+AutoLayoutHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayoutHelpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +167,9 @@
 				F52506472AC772F00008FFC3 /* ScreenshotCollectionViewCell.swift */,
 				F52506482AC772F00008FFC3 /* ScreenshotCollectionViewCell.xib */,
 				F525064B2AC990620008FFC3 /* ScreenShotsGalleryViewController.swift */,
+				F525066A2ACB59FB0008FFC3 /* ScreenshotDetailsViewController.swift */,
+				F525066E2ACB72BC0008FFC3 /* ScreenshotDetailsViewModel.swift */,
+				F525066B2ACB59FB0008FFC3 /* ScreenshotDetailsViewController.xib */,
 				F525064C2AC990620008FFC3 /* ScreenShotsGalleryViewController.xib */,
 				F52506512AC9982E0008FFC3 /* ScreenshotsViewModelCoordinatorDelegate.swift */,
 				F52506532ACA4D1E0008FFC3 /* ScreenshotModel.swift */,
@@ -162,6 +179,8 @@
 				F52506682ACB15850008FFC3 /* ScreenShotDetailTabBarViewModel.swift */,
 				F52506622ACAE6400008FFC3 /* ScreenShotInfoViewController.swift */,
 				F52506632ACAE6400008FFC3 /* ScreenShotInfoViewController.xib */,
+				F52506702ACB7DDB0008FFC3 /* CarouselCollectionViewCell.swift */,
+				F52506712ACB7DDB0008FFC3 /* CarouselCollectionViewCell.xib */,
 			);
 			path = ScreenShotAnalyzer;
 			sourceTree = "<group>";
@@ -188,6 +207,8 @@
 			children = (
 				F525065A2ACA573F0008FFC3 /* CGImagePropertyOrientation+UIImageOrientation.swift */,
 				F525065C2ACA57790008FFC3 /* VNClassificationObservation+confidenceString.swift */,
+				F52506742ACB9C200008FFC3 /* UIViewController+Helper.swift */,
+				F52506762ACB9C6C0008FFC3 /* UIView+AutoLayoutHelpers.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -296,9 +317,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F525066D2ACB59FB0008FFC3 /* ScreenshotDetailsViewController.xib in Resources */,
 				F525064A2AC772F00008FFC3 /* ScreenshotCollectionViewCell.xib in Resources */,
 				F525061A2AC392C00008FFC3 /* LaunchScreen.storyboard in Resources */,
 				F52506652ACAE6400008FFC3 /* ScreenShotInfoViewController.xib in Resources */,
+				F52506732ACB7DDB0008FFC3 /* CarouselCollectionViewCell.xib in Resources */,
 				F52506172AC392C00008FFC3 /* Assets.xcassets in Resources */,
 				F525064E2AC990620008FFC3 /* ScreenShotsGalleryViewController.xib in Resources */,
 				F52506402AC6E5A80008FFC3 /* ScreenshotsViewController.xib in Resources */,
@@ -329,20 +352,25 @@
 				F52506422AC6E73D0008FFC3 /* ScreenshotsViewModel.swift in Sources */,
 				F52506642ACAE6400008FFC3 /* ScreenShotInfoViewController.swift in Sources */,
 				F52506672ACAE7330008FFC3 /* ScreenshotInfoViewControllerProtocols.swift in Sources */,
+				F52506752ACB9C200008FFC3 /* UIViewController+Helper.swift in Sources */,
 				F525063F2AC6E5A80008FFC3 /* ScreenshotsViewController.swift in Sources */,
 				F52506612ACADE960008FFC3 /* ScreenShotDetailTabBarController.swift in Sources */,
 				F525065B2ACA573F0008FFC3 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */,
+				F52506772ACB9C6C0008FFC3 /* UIView+AutoLayoutHelpers.swift in Sources */,
 				F525060B2AC392BF0008FFC3 /* AppDelegate.swift in Sources */,
 				F52506462AC6F4360008FFC3 /* AppCoordinator.swift in Sources */,
 				F52506692ACB15860008FFC3 /* ScreenShotDetailTabBarViewModel.swift in Sources */,
 				F52506522AC9982E0008FFC3 /* ScreenshotsViewModelCoordinatorDelegate.swift in Sources */,
 				F52506492AC772F00008FFC3 /* ScreenshotCollectionViewCell.swift in Sources */,
+				F525066C2ACB59FB0008FFC3 /* ScreenshotDetailsViewController.swift in Sources */,
 				F525060D2AC392BF0008FFC3 /* SceneDelegate.swift in Sources */,
 				F525065D2ACA57790008FFC3 /* VNClassificationObservation+confidenceString.swift in Sources */,
 				F52506542ACA4D1E0008FFC3 /* ScreenshotModel.swift in Sources */,
 				F52506152AC392BF0008FFC3 /* ScreenShotAnalyzer.xcdatamodeld in Sources */,
+				F52506722ACB7DDB0008FFC3 /* CarouselCollectionViewCell.swift in Sources */,
 				F525064D2AC990620008FFC3 /* ScreenShotsGalleryViewController.swift in Sources */,
 				F52506562ACA52720008FFC3 /* ImagePredictor.swift in Sources */,
+				F525066F2ACB72BC0008FFC3 /* ScreenshotDetailsViewModel.swift in Sources */,
 				F52506582ACA53430008FFC3 /* MobileNetV2.mlmodel in Sources */,
 				F52506502AC9971D0008FFC3 /* ScreenShotsGalleryViewControllerProtocols.swift in Sources */,
 			);

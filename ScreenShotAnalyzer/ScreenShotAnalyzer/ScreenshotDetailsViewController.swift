@@ -1,25 +1,27 @@
 //
-//  ScreenShotInfoViewController.swift
+//  ScreenshotDetailsViewController.swift
 //  ScreenShotAnalyzer
 //
-//  Created by maple on 02/10/23.
+//  Created by maple on 03/10/23.
 //
 
 import UIKit
 
-class ScreenShotInfoViewController: UIViewController {
+class ScreenshotDetailsViewController: UIViewController {
 
+    @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var noteTextField: UITextField!
     @IBOutlet private weak var creationDateLabel: UILabel!
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var sizeLabel: UILabel!
     @IBOutlet private weak var predictionsLabel: UILabel!
 
-    private let viewModel: ScreenshotInfoViewControllerInput
+    private let viewModel: ScreenshotDetailsViewModelInput
 
-    init(viewModel: ScreenshotInfoViewControllerInput) {
+    init(viewModel: ScreenshotDetailsViewModelInput) {
         self.viewModel = viewModel
-        super.init(nibName: String(describing: ScreenShotInfoViewController.self), bundle: nil)
+        super.init(nibName: String(describing: ScreenshotDetailsViewController.self), bundle: nil)
+        viewModel.viewController = self
     }
 
     required init?(coder: NSCoder) {
@@ -35,7 +37,8 @@ class ScreenShotInfoViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
+        
+        imageView.image = viewModel.getScreenshotImage()
         noteTextField.text = viewModel.getScreenshotNote()
         creationDateLabel.text = viewModel.getCreationDateString()
         nameLabel.text = viewModel.getName()
@@ -48,10 +51,16 @@ class ScreenShotInfoViewController: UIViewController {
     }
 }
 
-extension ScreenShotInfoViewController: UITextFieldDelegate {
+extension ScreenshotDetailsViewController: UITextFieldDelegate {
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
 }
+
+extension ScreenshotDetailsViewController: ScreenshotDetailsViewModelOutput {
+
+}
+
+

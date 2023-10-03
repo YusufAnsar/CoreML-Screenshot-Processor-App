@@ -11,7 +11,7 @@ class ScreenShotDetailTabBarController: UITabBarController {
     private let shareVC: UIViewController
     private let screenShotInfoViewController: ScreenShotInfoViewController
     private let screenShotsGalleryViewController: ScreenShotsGalleryViewController
-
+    private var currentViewController: UIViewController?
     private let viewModel: ScreenShotDetailTabBarViewModelInput
 
     init(withViewModel viewModel: ScreenShotDetailTabBarViewModelInput,
@@ -40,9 +40,10 @@ class ScreenShotDetailTabBarController: UITabBarController {
         let deleteTab = UITabBarItem(title: "Delete", image: UIImage(systemName: "trash"), selectedImage: UIImage(systemName: "trash.fill"))
         screenShotsGalleryViewController.tabBarItem = deleteTab
 
-        self.viewControllers = [shareVC, screenShotInfoViewController, screenShotsGalleryViewController]
-        self.selectedIndex = 2
-        self.delegate = self
+        viewControllers = [shareVC, screenShotInfoViewController, screenShotsGalleryViewController]
+        selectedIndex = 2
+        currentViewController = screenShotsGalleryViewController
+        delegate = self
     }
 
     private func showShareActivity() {
@@ -67,11 +68,14 @@ extension ScreenShotDetailTabBarController: UITabBarControllerDelegate {
     }
 
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        print(viewController)
+        if viewController === screenShotsGalleryViewController, currentViewController === screenShotsGalleryViewController {
+            viewModel.deleteCurrentScreenshot()
+        }
+        currentViewController = viewController
     }
 }
 
 extension ScreenShotDetailTabBarController: ScreenShotDetailTabBarViewModelOutput {
-    
+
 }
 

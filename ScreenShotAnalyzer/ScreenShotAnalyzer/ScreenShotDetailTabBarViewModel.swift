@@ -10,6 +10,7 @@ import Foundation
 
 protocol ScreenShotDetailTabBarViewModelInput: AnyObject {
     var viewController: ScreenShotDetailTabBarViewModelOutput? { get set }
+    func deleteCurrentScreenshot()
 }
 
 protocol ScreenShotDetailTabBarViewModelOutput: AnyObject {
@@ -20,8 +21,8 @@ final class ScreenShotDetailTabBarViewModel {
 
     private let screenshots: NSMutableArray
     private var selectedIndex: Int
+    private var viewControllers: [ScreenshotDetailsViewController]
     weak var viewController: ScreenShotDetailTabBarViewModelOutput?
-    weak var screenshotInfoViewController: ScreenshotInfoViewControllerOutput?
     weak var galleryViewController: ScreenShotsGalleryViewControllerOutput?
 
     var currentScreenshot: ScreenshotModel? {
@@ -34,12 +35,30 @@ final class ScreenShotDetailTabBarViewModel {
     init(screenshots: NSMutableArray, selectedIndex: Int) {
         self.screenshots = screenshots
         self.selectedIndex = selectedIndex
+        viewControllers = screenshots.compactMap { screenShot in
+            if let screenShot = screenShot as? ScreenshotModel {
+                let viewModel = ScreenshotDetailsViewModel(screenshot: screenShot)
+                return ScreenshotDetailsViewController(viewModel: viewModel)
+            } else {
+                return nil
+            }
+        }
     }
 }
 
 
 extension ScreenShotDetailTabBarViewModel: ScreenShotDetailTabBarViewModelInput {
 
+    func deleteCurrentScreenshot() {
+        screenshots.removeObject(at: selectedIndex)
+        viewControllers.remove(at: selectedIndex)
+        if viewControllers.isEmpty {
+            selectedIndex = -1
+        } else if selectedIndex == viewControllers.count {
+            selectedIndex = viewControllers.count - 1
+        }
+        galleryViewController?.reloadPage()
+    }
 }
 
 extension ScreenShotDetailTabBarViewModel: ScreenshotInfoViewControllerInput {
@@ -88,4 +107,26 @@ extension ScreenShotDetailTabBarViewModel: ScreenshotInfoViewControllerInput {
 
 extension ScreenShotDetailTabBarViewModel: ScreenShotsGalleryViewControllerInput {
 
+    func getScreenShots() -> NSArray {
+        return screenshots
+    }
+
+    func getCurrentSelectedIndex() -> Int {
+        return selectedIndex
+    }
+
+    func set(currentSelectedIndex: Int) {
+        selectedIndex = currentSelectedIndex
+    }
+
+    func getCurrentViewController() -> ScreenshotDetailsViewController? {
+        if selectedIndex >= 0, selectedIndex < viewControllers.count {
+            return viewControllers[selectedIndex]
+        }
+        return nil
+    }
+
+    func getScreenshotDetailsViewControllers() -> [ScreenshotDetailsViewController] {
+        return viewControllers
+    }
 }
